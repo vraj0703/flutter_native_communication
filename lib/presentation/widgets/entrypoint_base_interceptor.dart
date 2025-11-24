@@ -2,11 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_communication/data/typedefs.dart';
-import 'package:flutter_native_communication/data/unit_classes.dart';
 import 'package:flutter_native_communication/domain/queuer.dart';
 import 'package:flutter_native_communication/logger.dart';
 import 'package:flutter_native_communication/presentation/bloc/entrypoint_bloc.dart';
 import 'entrypoint_base_page.dart';
+import 'package:flutter_core/core/models/unit_class.dart';
 
 class EntrypointBaseInterceptor<I> extends StatelessWidget {
   final I? input;
