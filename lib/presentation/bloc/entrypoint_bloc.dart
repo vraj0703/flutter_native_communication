@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_communication/data/event_channel/native_event_channel.dart';
 import 'package:flutter_native_communication/data/queuer/entrypoint_queuer.dart';
-import 'package:flutter_native_communication/logger.dart';
+import 'package:my_logger_metrics/logger.dart';
 
 part 'entrypoint_event.dart';
 

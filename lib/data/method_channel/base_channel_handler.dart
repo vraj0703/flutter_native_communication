@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:flutter_native_communication/logger.dart';
+import 'package:my_logger_metrics/logger.dart';
 
 /// the properties of the BaseChannelHandler
 /// any bloc can subscribe to listen the methods called from native,

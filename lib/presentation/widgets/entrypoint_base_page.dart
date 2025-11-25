@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_communication/data/typedefs.dart';
-import 'package:flutter_native_communication/logger.dart';
+import 'package:my_logger_metrics/logger.dart';
 import 'package:flutter_native_communication/presentation/bloc/entrypoint_bloc.dart';
 
 class EntrypointBasePage<I> extends StatelessWidget {

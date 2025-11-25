@@ -15,6 +15,9 @@ dependencies:
   flutter_core:
     git:
       url: https://github.com/vraj0703/flutter_core.git
+  my_logger_metrics:
+    git:
+      url: https://github.com/vraj0703/my_logger_metrics.git
 
   web: ^1.0.0
   plugin_platform_interface: ^2.0.2

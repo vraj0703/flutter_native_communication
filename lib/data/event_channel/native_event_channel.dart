@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_native_communication/data/typedefs.dart';
-import 'package:flutter_native_communication/logger.dart';
+import 'package:my_logger_metrics/logger.dart';
 import 'package:flutter_native_communication/data/queuer/entrypoint_queuer.dart';
 import 'package:flutter_native_communication/presentation/bloc/entrypoint_bloc.dart';
 
