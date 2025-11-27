@@ -15,7 +15,7 @@ class EntrypointLoaded<I> extends EntrypointState {
   const EntrypointLoaded(this.args);
 
   @override
-  List<Object> get props => [args.hashCode];
+  List<Object> get props => [args as Object];
 }
 
 class EntrypointExternalNavigationFailed extends EntrypointState {
@@ -26,3 +26,7 @@ class EntrypointExternalNavigationFailed extends EntrypointState {
   @override
   List<Object> get props => [reason];
 }
+
+class EntrypointInitial extends EntrypointState {}
+
+class EntrypointBadData extends EntrypointState {}

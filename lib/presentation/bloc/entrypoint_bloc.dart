@@ -81,4 +81,10 @@ abstract class EntrypointBloc<I> extends Bloc<EntrypointEvent, EntrypointState>
   ) {
     nativeCallsFlutter(event);
   }
+
+  @override
+  Future<void> close() {
+    _channelHandler.dispose();
+    return super.close();
+  }
 }

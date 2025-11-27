@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
@@ -30,10 +31,30 @@ class NativeEventChannel {
   final Map<String, Map<String, NativeEventCallback>>
   _subscriberMappedCallback = {};
 
+  NativeEventChannel({Stream<String>? stream}) {
+    if (stream != null) {
+      _stream = stream;
+    }
+  }
+
+  StreamSubscription? _subscription;
+
   void startListening() {
-    _stream.listen((event) {
-      _eventCall(json.decode(event));
+    _subscription = _stream.listen((event) {
+      try {
+        _eventCall(json.decode(event));
+      } catch (e, stackTrace) {
+        logger.e(
+          'Error processing event from native: $e',
+          stackTrace: stackTrace,
+        );
+      }
     });
+  }
+
+  void dispose() {
+    _subscription?.cancel();
+    _subscriberMappedCallback.clear();
   }
 
   subscribes({
@@ -97,5 +118,8 @@ class EntrypointChannelHandler {
       }
     });
   }
-}
 
+  dispose() {
+    methodChannel.setMethodCallHandler(null);
+  }
+}

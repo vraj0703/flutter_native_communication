@@ -70,6 +70,12 @@ class BaseChannelHandler {
       }
     });
   }
+
+  dispose() {
+    logger.d('dispose channel $methodChannelName');
+    _blocKeyMappedMethodCallback.clear();
+    _methodChannel.setMethodCallHandler(null);
+  }
 }
 
 typedef ChannelHandlerCallback = void Function(MethodCall call);

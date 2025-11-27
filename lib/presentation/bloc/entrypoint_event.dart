@@ -13,7 +13,7 @@ class EntrypointNative extends EntrypointEvent {
   const EntrypointNative({required this.args});
 
   @override
-  List<Object> get props => [args.hashCode];
+  List<Object> get props => [args];
 }
 
 class EntrypointMethodCall extends EntrypointEvent {
@@ -26,7 +26,7 @@ class EntrypointMethodCall extends EntrypointEvent {
   });
 
   @override
-  List<Object> get props => [methodName.hashCode, arguments.hashCode];
+  List<Object> get props => [methodName, arguments];
 }
 
 class EntrypointInternal<I> extends EntrypointEvent {
@@ -35,7 +35,7 @@ class EntrypointInternal<I> extends EntrypointEvent {
   const EntrypointInternal({required this.args});
 
   @override
-  List<Object> get props => [args.hashCode];
+  List<Object> get props => [args as Object];
 }
 
 class EntrypointNativeCallsFlutter extends EntrypointEvent {
@@ -48,5 +48,5 @@ class EntrypointNativeCallsFlutter extends EntrypointEvent {
   });
 
   @override
-  List<Object> get props => [args.hashCode];
+  List<Object> get props => [methodName, args];
 }
