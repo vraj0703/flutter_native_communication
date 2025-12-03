@@ -72,7 +72,7 @@ class HomeScreenWidget extends StatelessWidget {
     return EntrypointBaseInterceptor(
       input: tryCastNoFallback<None>(state.extra),
 
-      bloc: HomeEntrypointImpl(EntrypointWaiting(), "twin.home"),
+      bloc: HomeEntrypointImpl(EntrypointWaiting(), "com.home"),
 
       builder: (_, __) => Container(),
     );

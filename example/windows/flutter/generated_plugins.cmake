@@ -3,7 +3,12 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  connectivity_plus
+  flutter_core
+  flutter_localization
   flutter_native_communication
+  my_localizations
+  my_logger_metrics
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
