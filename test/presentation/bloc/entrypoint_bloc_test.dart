@@ -29,7 +29,6 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   const String channelName = 'test_entrypoint_channel';
-  const MethodChannel channel = MethodChannel(channelName);
 
   group('EntrypointBloc', () {
     late TestEntrypointBloc bloc;
