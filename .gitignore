@@ -5,12 +5,9 @@
 *.swp
 .DS_Store
 .atom/
-.build/
 .buildlog/
 .history
 .svn/
-.swiftpm/
-migrate_working_dir/
 
 # IntelliJ related
 *.iml
@@ -18,16 +15,34 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Visual Studio Code related
+.vscode/
 
 # Flutter/Dart/Pub related
-# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
-/pubspec.lock
 **/doc/api/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner/Base.lproj/MainMenu.xib
+**/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+**/ios/Runner/App.framework
+**/ios/Runner/Flutter.framework
+**/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+**/android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+**/android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+**/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+**/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+**/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+**/pubspec.lock
+build/
 .dart_tool/
+.flutter-plugins
 .flutter-plugins-dependencies
-/build/
-/coverage/
+.packages
+.pub-cache/
+.pub/
